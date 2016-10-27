@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "customVmName": {
-      "value": "CernVMtest2"
+      "value": "CernVMtest"
     },
     "userImageStorageAccountName": {
-      "value": "cernstorageaccount"
+      "value": ""
     },
     "adminUsername": {
       "value": "dirac"
@@ -14,16 +14,16 @@
     "adminPassword": {
         "reference":{
             "keyVault":{
-                "id":"/subscriptions/fcb66b32-3e4f-4aad-8426-def85c5880f0/resourceGroups/TestingVMmich/providers/Microsoft.KeyVault/vaults/VaultKey1"
+                "id":"/subscriptions/fcb66b32-3e4f-4aad-8426-def85c5880f0/resourceGroups/TestingDIRAC/providers/Microsoft.KeyVault/vaults/BelleKeys"
             },
             "secretName":"VMPassword"
         }
     },
     "osDiskVhdUri": {
-      "value": "https://cernstorageaccount.blob.core.windows.net/vm-images/cernvm-3.6.5.vhd"
+      "value": "https://cernstorageaccount.blob.core.windows.net/CernVM-image/cernvm-3.6.5.vhd"
     },
     "dnsLabelPrefix": {
-      "value": "clouddirac2"
+      "value": "cloudbelle"
     },
     "osType": {
       "value": "Linux"
