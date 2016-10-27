@@ -1,0 +1,44 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "customVmName": {
+      "value": "CernVMtest2"
+    },
+    "userImageStorageAccountName": {
+      "value": "cernstorageaccount"
+    },
+    "adminUsername": {
+      "value": "dirac"
+    },
+    "adminPassword": {
+        "reference":{
+            "keyVault":{
+                "id":"/subscriptions/fcb66b32-3e4f-4aad-8426-def85c5880f0/resourceGroups/TestingVMmich/providers/Microsoft.KeyVault/vaults/VaultKey1"
+            },
+            "secretName":"VMPassword"
+        }
+    },
+    "osDiskVhdUri": {
+      "value": "https://cernstorageaccount.blob.core.windows.net/vm-images/cernvm-3.6.5.vhd"
+    },
+    "dnsLabelPrefix": {
+      "value": "clouddirac2"
+    },
+    "osType": {
+      "value": "Linux"
+    },
+    "vmSize": {
+      "value": "Standard_D2"
+    },
+    "newOrExistingVnet": {
+      "value": "new"
+    },
+    "newOrExistingVnetName": {
+      "value": "customVNET"
+    },
+    "newOrExistingSubnetName": {
+      "value": "subnet1"
+    }
+  }
+}
