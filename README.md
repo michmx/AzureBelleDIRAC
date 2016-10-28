@@ -22,8 +22,9 @@ And change mode to Azure Resource Manager:
 
 ### Create the resources required
 
-WIP
-(Look at the [first steps](https://github.com/michmx/AzureBelleDIRAC/wiki/First-steps))
+```
+$ cd DeployResourceGroup && bash deployCLI.sh
+```
 
 ### Deploy a VM
 
@@ -41,16 +42,16 @@ Find the IP of the deployed VM
 $ azure vm list-ip-address
 ```
 
-Copy the wrapper to the VM
+Copy the DIRAC wrapper to the VM
 
 ```
 $ scp pilot_wrapper.py dirac@<IP>:~/
 ```
 
-Run the wrapper:
+Run the wrapper inside the VM:
 
 ```
-$ bash ~/pilot_wrapper.py
+$ ssh dirac@<ip> bash ~/pilot_wrapper.py
 ```
 
 
