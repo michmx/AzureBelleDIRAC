@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "customVmName": {
-      "value": "CernVMtest"
+      "value": "bellevmtest"
     },
     "userImageStorageAccountName": {
-      "value": ""
+      "value": "bellestorage"
     },
     "adminUsername": {
       "value": "dirac"
@@ -20,10 +20,10 @@
         }
     },
     "osDiskVhdUri": {
-      "value": "https://cernstorageaccount.blob.core.windows.net/CernVM-image/cernvm-3.6.5.vhd"
+      "value": "https://bellestorage.blob.core.windows.net/cernvmimage/cernvm-3.6.5.vhd"
     },
     "dnsLabelPrefix": {
-      "value": "cloudbelle"
+      "value": "cloudbelle2"
     },
     "osType": {
       "value": "Linux"

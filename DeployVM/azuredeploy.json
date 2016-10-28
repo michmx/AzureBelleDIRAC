@@ -170,7 +170,7 @@
               "uri": "[parameters('osDiskVhdUri')]"
             },
             "vhd": {
-              "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', parameters('userImageStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob, 'vhd-files/',variables('vmName'), uniquestring(resourceGroup().id), 'osDisk.vhd')]"
+              "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', parameters('userImageStorageAccountName')), variables('apiVersion')).primaryEndpoints.blob, 'vhdfiles/',variables('vmName'), uniquestring(resourceGroup().id), 'osDisk.vhd')]"
             }
           }
         },
